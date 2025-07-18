@@ -8,10 +8,9 @@ import pyjokes
 import wolframalpha
 import requests
 
-# Initialize speech engine
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)  # Female voice
+engine.setProperty('voice', voices[1].id) 
 
 def speak(audio):
     """Convert text to speech"""
@@ -51,7 +50,7 @@ if __name__ == "__main__":
     while True:
         query = take_command()
         
-        # Basic commands
+      
         if 'wikipedia' in query:
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
